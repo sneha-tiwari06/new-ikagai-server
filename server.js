@@ -95,6 +95,39 @@ app.post('/api/book', async (req, res) => {
         res.status(500).send('Error sending email');
     }
 });
+app.post('/api/modal', async (req, res) => {
+    const { fullName2, mobileNumber2, email2, msg2 } = req.body;
+    const { utm_source, utm_medium, utm_campaign, utm_term, utm_content } = req;
+
+    const transporter = nodemailer.createTransport({
+        service: 'Gmail',
+        auth: {
+            user: 'tiwarisneha491@gmail.com',
+            pass: 'qwpx wgzt yhok gqbq',
+        },
+    });
+
+    const mailOptions = {
+        from: 'tiwarisneha491@gmail.com',
+        to: 'tiwarisneha491@gmail.com',
+        cc: 'paid@theperfectionist.in',
+        subject: 'New Appointment Form Submission',
+        text: `Full Name: ${fullName2}\nMobile Number: ${mobileNumber2}\nEmail: ${email2}\nmsg: ${msg2}\n\n` +
+        `UTM Source: ${utm_source || 'Not provided'}\n` +
+        `UTM Medium: ${utm_medium || 'Not provided'}\n` +
+        `UTM Campaign: ${utm_campaign || 'Not provided'}\n` +
+        `UTM Term: ${utm_term || 'Not provided'}\n` +
+        `UTM Content: ${utm_content || 'Not provided'}`,
+    };
+
+    try {
+        await transporter.sendMail(mailOptions);
+        res.status(200).send('Email sent successfully');
+    } catch (error) {
+        console.error('Error sending email', error);
+        res.status(500).send('Error sending email');
+    }
+});
 
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
