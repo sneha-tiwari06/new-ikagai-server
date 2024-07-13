@@ -51,42 +51,42 @@ app.post('/api/contact', extractUTMParams, async (req, res) => {
                 <h2 style="background-color: #f4f4f4; padding: 10px; border-bottom: 2px solid #e0e0e0;">New Contact Form Submission</h2>
                 <table style="width: 100%; border-collapse: collapse;">
                     <tr>
-                        <td style="background-color: #f4f4f4; padding: 10px; font-weight: bold;">Name:</td>
+                        <td>Name:</td>
                         <td style="padding: 10px;">${name}</td>
                     </tr>
                     <tr>
-                        <td style="background-color: #f4f4f4; padding: 10px; font-weight: bold;">Phone:</td>
+                        <td>Phone:</td>
                         <td style="padding: 10px;">${phone}</td>
                     </tr>
                     <tr>
-                        <td style="background-color: #f4f4f4; padding: 10px; font-weight: bold;">Email:</td>
+                        <td>Email:</td>
                         <td style="padding: 10px;">${email}</td>
                     </tr>
                     <tr>
-                        <td style="background-color: #f4f4f4; padding: 10px; font-weight: bold;">Message:</td>
+                        <td>Message:</td>
                         <td style="padding: 10px;">${msg}</td>
                     </tr>
                 </table>
                 <h3>UTM Parameters</h3>
                 <table style="width: 100%; border-collapse: collapse;">
                     <tr>
-                        <td style="background-color: #f4f4f4; padding: 10px; font-weight: bold;">UTM Source:</td>
+                        <td>UTM Source:</td>
                         <td style="padding: 10px;">${utm_source || 'Not provided'}</td>
                     </tr>
                     <tr>
-                        <td style="background-color: #f4f4f4; padding: 10px; font-weight: bold;">UTM Medium:</td>
+                        <td>UTM Medium:</td>
                         <td style="padding: 10px;">${utm_medium || 'Not provided'}</td>
                     </tr>
                     <tr>
-                        <td style="background-color: #f4f4f4; padding: 10px; font-weight: bold;">UTM Campaign:</td>
+                        <td>UTM Campaign:</td>
                         <td style="padding: 10px;">${utm_campaign || 'Not provided'}</td>
                     </tr>
                     <tr>
-                        <td style="background-color: #f4f4f4; padding: 10px; font-weight: bold;">UTM Term:</td>
+                        <td>UTM Term:</td>
                         <td style="padding: 10px;">${utm_term || 'Not provided'}</td>
                     </tr>
                     <tr>
-                        <td style="background-color: #f4f4f4; padding: 10px; font-weight: bold;">UTM Content:</td>
+                        <td>UTM Content:</td>
                         <td style="padding: 10px;">${utm_content || 'Not provided'}</td>
                     </tr>
                 </table>
