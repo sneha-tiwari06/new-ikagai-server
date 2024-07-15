@@ -44,56 +44,15 @@ app.post('/api/contact', extractUTMParams, async (req, res) => {
     const mailOptions = {
         from: 'tiwarisneha491@gmail.com',
         to: 'tiwarisneha491@gmail.com',
-        cc: 'paid@theperfectionist.in',
+        cc: ['paid@theperfectionist.in', 'performance@theperfectionist.in'],
         subject: 'New Contact Form Submission',
-        html: `
-            <div style="font-family: Arial, sans-serif; color: #333;">
-                <h2 style="background-color: #f4f4f4; padding: 10px; border-bottom: 2px solid #e0e0e0; text-align: center;">New Contact Form Submission</h2>
-                <table style="width: 100%; border-collapse: collapse;">
-                    <tr>
-                        <td>Name:</td>
-                        <td style="padding: 10px;">${name}</td>
-                    </tr>
-                    <tr>
-                        <td>Phone:</td>
-                        <td style="padding: 10px;">${phone}</td>
-                    </tr>
-                    <tr>
-                        <td>Email:</td>
-                        <td style="padding: 10px;">${email}</td>
-                    </tr>
-                    <tr>
-                        <td>Message:</td>
-                        <td style="padding: 10px;">${msg}</td>
-                    </tr>
-                </table>
-                <h3>UTM Parameters</h3>
-                <table style="width: 100%; border-collapse: collapse;">
-                    <tr>
-                        <td>UTM Source:</td>
-                        <td style="padding: 10px;">${utm_source || 'Not provided'}</td>
-                    </tr>
-                    <tr>
-                        <td>UTM Medium:</td>
-                        <td style="padding: 10px;">${utm_medium || 'Not provided'}</td>
-                    </tr>
-                    <tr>
-                        <td>UTM Campaign:</td>
-                        <td style="padding: 10px;">${utm_campaign || 'Not provided'}</td>
-                    </tr>
-                    <tr>
-                        <td>UTM Term:</td>
-                        <td style="padding: 10px;">${utm_term || 'Not provided'}</td>
-                    </tr>
-                    <tr>
-                        <td>UTM Content:</td>
-                        <td style="padding: 10px;">${utm_content || 'Not provided'}</td>
-                    </tr>
-                </table>
-            </div>
-        `,
-    };
-    
+        text: `Name: ${name}\nPhone: ${phone}\nEmail: ${email}\nMessage: ${msg},\n` +
+              `UTM Source: ${utm_source || 'Not provided'}\n` +
+              `UTM Medium: ${utm_medium || 'Not provided'}\n` +
+              `UTM Campaign: ${utm_campaign || 'Not provided'}\n` +
+              `UTM Term: ${utm_term || 'Not provided'}\n` +
+              `UTM Content: ${utm_content || 'Not provided'}`,
+};
 
 try {
     await transporter.sendMail(mailOptions);
@@ -118,54 +77,14 @@ app.post('/api/book', async (req, res) => {
     const mailOptions = {
         from: 'tiwarisneha491@gmail.com',
         to: 'tiwarisneha491@gmail.com',
-        cc: 'paid@theperfectionist.in',
+        cc: ['paid@theperfectionist.in', 'performance@theperfectionist.in'],
         subject: 'New Appointment Form Submission',
-        html: `
-            <div style="font-family: Arial, sans-serif; color: #333;">
-                <h2 style="background-color: #f4f4f4; padding: 10px; border-bottom: 2px solid #e0e0e0; text-align: center;">New Contact Form Submission</h2>
-                <table style="width: 100%; border-collapse: collapse;">
-                    <tr>
-                        <td>Name:</td>
-                        <td style="padding: 10px;">${fullName}</td>
-                    </tr>
-                    <tr>
-                        <td>Phone:</td>
-                        <td style="padding: 10px;">${mobileNumber}</td>
-                    </tr>
-                    <tr>
-                        <td>Email:</td>
-                        <td style="padding: 10px;">${email}</td>
-                    </tr>
-                    <tr>
-                        <td>Message:</td>
-                        <td style="padding: 10px;">${msg}</td>
-                    </tr>
-                </table>
-                <h3>UTM Parameters</h3>
-                <table style="width: 100%; border-collapse: collapse;">
-                    <tr>
-                        <td>UTM Source:</td>
-                        <td style="padding: 10px;">${utm_source || 'Not provided'}</td>
-                    </tr>
-                    <tr>
-                        <td>UTM Medium:</td>
-                        <td style="padding: 10px;">${utm_medium || 'Not provided'}</td>
-                    </tr>
-                    <tr>
-                        <td>UTM Campaign:</td>
-                        <td style="padding: 10px;">${utm_campaign || 'Not provided'}</td>
-                    </tr>
-                    <tr>
-                        <td>UTM Term:</td>
-                        <td style="padding: 10px;">${utm_term || 'Not provided'}</td>
-                    </tr>
-                    <tr>
-                        <td>UTM Content:</td>
-                        <td style="padding: 10px;">${utm_content || 'Not provided'}</td>
-                    </tr>
-                </table>
-            </div>
-        `,
+        text: `Full Name: ${fullName}\nMobile Number: ${mobileNumber}\nEmail: ${email}\nmsg: ${msg}\n\n` +
+        `UTM Source: ${utm_source || 'Not provided'}\n` +
+        `UTM Medium: ${utm_medium || 'Not provided'}\n` +
+        `UTM Campaign: ${utm_campaign || 'Not provided'}\n` +
+        `UTM Term: ${utm_term || 'Not provided'}\n` +
+        `UTM Content: ${utm_content || 'Not provided'}`,
     };
 
     try {
@@ -191,54 +110,14 @@ app.post('/api/modal', async (req, res) => {
     const mailOptions = {
         from: 'tiwarisneha491@gmail.com',
         to: 'tiwarisneha491@gmail.com',
-        cc: 'paid@theperfectionist.in',
+        cc: ['paid@theperfectionist.in', 'performance@theperfectionist.in'],
         subject: 'New Appointment Form Submission',
-        html: `
-            <div style="font-family: Arial, sans-serif; color: #333;">
-                <h2 style="background-color: #f4f4f4; padding: 10px; border-bottom: 2px solid #e0e0e0; text-align: center;">New Contact Form Submission</h2>
-                <table style="width: 100%; border-collapse: collapse;">
-                    <tr>
-                        <td>Name:</td>
-                        <td style="padding: 10px;">${fullName2}</td>
-                    </tr>
-                    <tr>
-                        <td>Phone:</td>
-                        <td style="padding: 10px;">${mobileNumber2}</td>
-                    </tr>
-                    <tr>
-                        <td>Email:</td>
-                        <td style="padding: 10px;">${email2}</td>
-                    </tr>
-                    <tr>
-                        <td>Message:</td>
-                        <td style="padding: 10px;">${msg2}</td>
-                    </tr>
-                </table>
-                <h3>UTM Parameters</h3>
-                <table style="width: 100%; border-collapse: collapse;">
-                    <tr>
-                        <td>UTM Source:</td>
-                        <td style="padding: 10px;">${utm_source || 'Not provided'}</td>
-                    </tr>
-                    <tr>
-                        <td>UTM Medium:</td>
-                        <td style="padding: 10px;">${utm_medium || 'Not provided'}</td>
-                    </tr>
-                    <tr>
-                        <td>UTM Campaign:</td>
-                        <td style="padding: 10px;">${utm_campaign || 'Not provided'}</td>
-                    </tr>
-                    <tr>
-                        <td>UTM Term:</td>
-                        <td style="padding: 10px;">${utm_term || 'Not provided'}</td>
-                    </tr>
-                    <tr>
-                        <td>UTM Content:</td>
-                        <td style="padding: 10px;">${utm_content || 'Not provided'}</td>
-                    </tr>
-                </table>
-            </div>
-        `,
+        text: `Full Name: ${fullName2}\nMobile Number: ${mobileNumber2}\nEmail: ${email2}\nmsg: ${msg2}\n\n` +
+        `UTM Source: ${utm_source || 'Not provided'}\n` +
+        `UTM Medium: ${utm_medium || 'Not provided'}\n` +
+        `UTM Campaign: ${utm_campaign || 'Not provided'}\n` +
+        `UTM Term: ${utm_term || 'Not provided'}\n` +
+        `UTM Content: ${utm_content || 'Not provided'}`,
     };
 
     try {
