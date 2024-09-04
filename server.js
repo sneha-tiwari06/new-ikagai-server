@@ -42,7 +42,7 @@ app.post('/api/contact', extractUTMParams, async (req, res) => {
     });
 
     const mailOptions = {
-        from: email,
+        from: 'tiwarisneha491@gmail.com',
         to: 'tiwarisneha491@gmail.com',
         cc: ['paid@theperfectionist.in', 'paid@theperfectionist.in'],
         subject: 'New Contact Form Submission',
@@ -75,7 +75,7 @@ app.post('/api/book', async (req, res) => {
     });
 
     const mailOptions = {
-        from: email,
+        from: 'tiwarisneha491@gmail.com',
         to: 'tiwarisneha491@gmail.com',
         cc: ['paid@theperfectionist.in', 'paid@theperfectionist.in'],
         subject: 'New Appointment Form Submission',
@@ -108,7 +108,7 @@ app.post('/api/modal', async (req, res) => {
     });
 
     const mailOptions = {
-        from: email2,
+        from: 'tiwarisneha491@gmail.com',
         to: 'tiwarisneha491@gmail.com',
         cc: ['paid@theperfectionist.in', 'paid@theperfectionist.in'],
         subject: 'New Appointment Form Submission',
