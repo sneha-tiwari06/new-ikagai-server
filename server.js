@@ -67,10 +67,10 @@ app.post('/api/book', async (req, res) => {
     const { utm_source, utm_medium, utm_campaign, utm_term, utm_content } = req;
 
     const transporter = nodemailer.createTransport({
-        service: 'Gmail',
+        service: 'ikagai',
         auth: {
-            user: 'tiwarisneha491@gmail.com',
-            pass: 'qwpx wgzt yhok gqbq',
+            user: 'devfreelance23m@gmail.com',
+            pass: 'crmp helz dgxp qidj',
         },
     });
 
@@ -100,10 +100,10 @@ app.post('/api/modal', async (req, res) => {
     const { utm_source, utm_medium, utm_campaign, utm_term, utm_content } = req;
 
     const transporter = nodemailer.createTransport({
-        service: 'Gmail',
+        service: 'ikagai',
         auth: {
-            user: 'tiwarisneha491@gmail.com',
-            pass: 'qwpx wgzt yhok gqbq',
+            user: 'devfreelance23m@gmail.com',
+            pass: 'crmp helz dgxp qidj',
         },
     });
 
