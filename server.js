@@ -34,7 +34,7 @@ app.post('/api/contact', extractUTMParams, async (req, res) => {
     const { utm_source, utm_medium, utm_campaign, utm_term, utm_content } = req;
 
     const transporter = nodemailer.createTransport({
-        service: 'ikagai',
+        service: 'gmail',
         auth: {
             user: 'devfreelance23m@gmail.com',
             pass: 'crmp helz dgxp qidj',
@@ -67,7 +67,7 @@ app.post('/api/book', async (req, res) => {
     const { utm_source, utm_medium, utm_campaign, utm_term, utm_content } = req;
 
     const transporter = nodemailer.createTransport({
-        service: 'ikagai',
+        service: 'gmail',
         auth: {
             user: 'devfreelance23m@gmail.com',
             pass: 'crmp helz dgxp qidj',
@@ -100,7 +100,7 @@ app.post('/api/modal', async (req, res) => {
     const { utm_source, utm_medium, utm_campaign, utm_term, utm_content } = req;
 
     const transporter = nodemailer.createTransport({
-        service: 'ikagai',
+        service: 'gmail',
         auth: {
             user: 'devfreelance23m@gmail.com',
             pass: 'crmp helz dgxp qidj',
