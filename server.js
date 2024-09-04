@@ -44,7 +44,7 @@ app.post('/api/contact', extractUTMParams, async (req, res) => {
     const mailOptions = {
         from: 'tiwarisneha491@gmail.com',
         to: 'tiwarisneha491@gmail.com',
-        cc: ['paid@theperfectionist.in', 'paid@theperfectionist.in'],
+        cc: ['preeti@theperfectionist.in', 'paid@theperfectionist.in'],
         subject: 'New Contact Form Submission',
         text: `Name: ${name}\nPhone: ${phone}\nEmail: ${email}\nMessage: ${msg},\n` +
               `UTM Source: ${utm_source || 'Not provided'}\n` +
@@ -77,7 +77,7 @@ app.post('/api/book', async (req, res) => {
     const mailOptions = {
         from: 'tiwarisneha491@gmail.com',
         to: 'tiwarisneha491@gmail.com',
-        cc: ['paid@theperfectionist.in', 'paid@theperfectionist.in'],
+        cc: ['preeti@theperfectionist.in', 'paid@theperfectionist.in'],
         subject: 'New Appointment Form Submission',
         text: `Full Name: ${fullName}\nMobile Number: ${mobileNumber}\nEmail: ${email}\nmsg: ${msg}\n\n` +
         `UTM Source: ${utm_source || 'Not provided'}\n` +
@@ -110,7 +110,7 @@ app.post('/api/modal', async (req, res) => {
     const mailOptions = {
         from: 'tiwarisneha491@gmail.com',
         to: 'tiwarisneha491@gmail.com',
-        cc: ['paid@theperfectionist.in', 'paid@theperfectionist.in'],
+        cc: ['preeti@theperfectionist.in', 'paid@theperfectionist.in'],
         subject: 'New Appointment Form Submission',
         text: `Full Name: ${fullName2}\nMobile Number: ${mobileNumber2}\nEmail: ${email2}\nmsg: ${msg2}\n\n` +
         `UTM Source: ${utm_source || 'Not provided'}\n` +
