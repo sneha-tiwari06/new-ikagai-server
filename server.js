@@ -36,8 +36,8 @@ app.post('/api/contact', extractUTMParams, async (req, res) => {
     const transporter = nodemailer.createTransport({
         service: 'Gmail',
         auth: {
-            user: 'tiwarisneha491@gmail.com',
-            pass: 'qwpx wgzt yhok gqbq',
+            user: 'devfreelance23m@gmail.com',
+            pass: 'crmp helz dgxp qidj',
         },
     });
 
