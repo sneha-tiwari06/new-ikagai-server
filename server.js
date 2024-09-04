@@ -6,7 +6,15 @@ const cors = require('cors');
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-app.use(cors());
+
+const corsOptions = {
+  origin: function (origin, callback) {
+    callback(null, origin);
+  },
+  credentials: true,
+};
+
+app.use(cors(corsOptions));
 app.use(bodyParser.json());
 const extractUTMParams = (req, res, next) => {
     const { utm_source, utm_medium, utm_campaign, utm_term, utm_content } = req.body;
