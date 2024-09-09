@@ -7,14 +7,14 @@ const app = express();
 const PORT = 5000;
 
 
-const corsOptions = {
-  origin: function (origin, callback) {
-    callback(null, origin);
-  },
-  credentials: true,
-};
+// const corsOptions = {
+//   origin: function (origin, callback) {
+//     callback(null, origin);
+//   },
+//   credentials: true,
+// };
 
-app.use(cors(corsOptions));
+app.use(cors());
 app.use(bodyParser.json());
 const extractUTMParams = (req, res, next) => {
     const { utm_source, utm_medium, utm_campaign, utm_term, utm_content } = req.body;
